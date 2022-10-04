@@ -1,9 +1,12 @@
-import './work.module.scss'
+import classNames from 'classnames/bind';
+import styles from './work.module.scss'
+
+const cx = classNames.bind(styles)
 
 function Work() {
     return (  
-        <div className='work'>
-
+        <div className={cx('work')} id="work">
+            Work
         </div>
     );
 }
