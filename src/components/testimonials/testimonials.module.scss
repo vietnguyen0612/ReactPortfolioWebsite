@@ -1,3 +1,82 @@
 .testimonials {
-    background-color: lightcoral;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    h1 {
+        font-size: 50px;
+        margin: 0;
+    }
+
+    .container {
+        width: 90%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        margin-top: 35px;
+
+        .tag {
+            width: 300px;
+            height : 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+            box-shadow: 0px -1px 15px -8px black;
+            border-radius: 12px;
+            transition: all 0.6s ease;
+            margin: 30px 20px;
+            cursor: pointer;
+            .header {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+                align-items: center;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    object-fit: cover;
+                    &:nth-child(2) {
+                        width: 70px;
+                        height: 70px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+                }
+
+
+            }
+            .footer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .name {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                .jobDes {
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: rgb(139, 136, 136);
+                }
+            }
+
+            .content {
+                background-color: antiquewhite;
+            }
+
+
+            &:hover {
+                transform: scale(1.1);
+            }
+    
+        }
+    }
+
 }
