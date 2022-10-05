@@ -1,3 +1,114 @@
 .work {
-    background-color: lightgreen;
+    background-color: crimson;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .slider {
+        height: 350px;
+        display: flex;
+        position: absolute;
+        left: 0;
+        transition: all 1s ease;
+        .container {
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+
+            .item {
+                width: 700px;
+                height: 100%;
+                background-color: white;
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+
+                .left {
+                    flex: 4;
+                    height: 80%;
+                    display : flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .leftContainer {
+
+                        width: 90%;
+                        height: 70%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        .imgContainer {
+                            width: 40px;
+                            height:40px;
+                            background-color: rgb(204, 61, 21);
+                            border-radius: 50px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            img {
+                                width: 25px;
+                            }
+                        }
+
+                        h2 {
+                            font-size: 20px;
+                        }
+
+                        p {
+                            font-size: 13px;
+                        }
+                        span {
+                            font-size: 12;
+                            font-weight: 600;
+                            text-decoration: underline;
+                        }
+                    }
+                }   
+                .right {
+                    flex: 8;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    overflow: hidden;
+
+                    img {
+                        width: 400px;
+                        transform: rotate(10deg);
+                    }
+
+                }
+            }
+        }
+    }
+
+    .arrow {
+        &.right {
+            width: 45px;
+            position: absolute;
+            right: 100px;
+            top: 48%;
+            background-color: crimson;
+            cursor: pointer;
+        }
+
+        &.left {
+            width: 45px;
+            position: absolute;
+            left: 100px;
+            top: 48%;
+            background-color: crimson;
+            transform: rotate(180deg);
+            cursor: pointer;
+
+        }
+    }
+
 }
