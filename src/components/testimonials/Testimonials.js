@@ -46,22 +46,10 @@ function Testimonials() {
         <div className={cx('testimonials')} id="testimonials">
             <h1 className={cx('title')}>Testimonials</h1>
             <div className={cx('container')}>
-                {/* <div className={cx('tag')}>
-                    <div className={cx('header')}>
-                        <img src='https://raw.githubusercontent.com/safak/youtube/react-portfolio/public/assets/right-arrow.png' alt='' />
-                        <img src={data[0].img} alt='' />
-                        <img src={data[0].icon} alt='' />
-                    </div>
-                    <div  className={cx('content')}>{data[0].desc}</div>
-                    <div className={cx('footer')}>
-                        <div className={cx('name')}>{data[0].name}</div>
-                        <div className={cx("jobDes")}>{data[0].title}</div>
-                    </div>
-                </div> */}
 
                 {
                     data.map((d) => (
-                        <div className={cx('tag')}>
+                        <div key={d.id} className={cx('tag')}>
                             <div className={cx('header')}>
                                 <img src='https://raw.githubusercontent.com/safak/youtube/react-portfolio/public/assets/right-arrow.png' alt='' />
                                 <img src={d.img} alt='' />
