@@ -1,3 +1,5 @@
+@import '../../global.scss';
+
 .work {
     background-color: crimson;
     display: flex;
@@ -11,6 +13,9 @@
         position: absolute;
         left: 0;
         transition: all 1s ease;
+        @include mobile{
+           height: 180px;
+        }
         .container {
             width: 100vw;
             display: flex;
@@ -28,6 +33,10 @@
                 justify-content: center;
                 align-items: center;
 
+                @include mobile{
+                   width: 300px;
+                }
+
 
                 .left {
                     flex: 4;
@@ -35,14 +44,22 @@
                     display : flex;
                     justify-content: center;
                     align-items: center;
+                    @include mobile{
+                        height: 100%;
+                    }
 
                     .leftContainer {
-
                         width: 90%;
                         height: 70%;
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
+                        
+                        @include mobile{
+                            width: 100%;
+                            padding: 5px;
+                            height: 90%;
+                        }
 
                         .imgContainer {
                             width: 40px;
@@ -52,22 +69,36 @@
                             display: flex;
                             justify-content: center;
                             align-items: center;
+                            @include mobile {
+                               width: 30px; 
+                               height: 30px;
+                            }
                             img {
                                 width: 25px;
+
                             }
                         }
 
                         h2 {
                             font-size: 20px;
+                            @include mobile {
+                                font-size: 15px;
+                            }
                         }
 
                         p {
                             font-size: 13px;
+                            @include mobile {
+                                display: none;
+                            }
                         }
                         span {
-                            font-size: 12;
                             font-weight: 600;
                             text-decoration: underline;
+                            @include mobile {
+                                font-size: 12px;
+                                
+                            }
                         }
                     }
                 }   
@@ -92,11 +123,15 @@
     .arrow {
         &.right {
             width: 45px;
+            background-color: transparent;
             position: absolute;
             right: 100px;
             top: 48%;
-            background-color: crimson;
             cursor: pointer;
+            @include mobile{
+                width: 30px;
+                right: 5px;
+            }
         }
 
         &.left {
@@ -104,9 +139,13 @@
             position: absolute;
             left: 100px;
             top: 48%;
-            background-color: crimson;
+            background-color: transparent;
             transform: rotate(180deg);
             cursor: pointer;
+            @include mobile{
+                width: 30px;
+                left: 5px;
+            }
 
         }
     }

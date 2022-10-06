@@ -1,3 +1,5 @@
+@import '../../global.scss';
+
 .portfolioList {
     margin-right: 50px;
     padding: 7px;
@@ -8,5 +10,8 @@
     &.active {
         background-color: #15023a;
         color: white;
+    }
+    @include mobile{
+        margin-right: 10px;
     }
 }

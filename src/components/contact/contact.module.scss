@@ -1,7 +1,12 @@
+@import '../../global.scss';
+
 .contact {
     background-color: white;
     display: flex;
     justify-content: center;
+    @include mobile {
+        flex-direction: column;                 
+    }
     
     .left {
         flex:1;
@@ -13,10 +18,13 @@
 
     .right{
         flex:1;
-        padding-left: 100px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        @include mobile {
+            justify-content: flex-start;                     
+        }
 
         form {
             display: flex;
@@ -24,6 +32,9 @@
             align-items: center;
             width: 70%;
             height: 70%;
+            @include mobile {
+                flex: 1;                   
+            }
 
             .email {
                 width: 300px;
@@ -33,6 +44,12 @@
                 outline: none;
                 margin: 12px 0;
                 border-radius: 3px;
+                @include mobile {
+                    width: 260px;
+                    height: 30px;
+                    font-size: 14px;
+                    margin: 5px 0;             
+                }
             }
             .message {
                 width: 300px;
@@ -42,6 +59,12 @@
                 outline: none;
                 margin: 12px 0;
                 border-radius: 3px;
+                @include mobile {
+                    width: 260px;
+                    height: 120px;
+                    font-size: 14px;
+                    margin: 5px 0;               
+                }
             }
 
             button {
@@ -57,6 +80,11 @@
 
                 &:focus {
                     outline: none;
+                }
+                @include mobile {
+                    width: 100px;    
+                    height: 30px;
+                    margin-bottom: 10px;
                 }
             }
             p {

@@ -1,6 +1,14 @@
+@import '../../global.scss';
+
+
 .intro {
     background-color: white;
     display: flex;
+
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+    }
 
 
     .left {
@@ -13,10 +21,19 @@
             margin-top: 50px;
             background-color: crimson;
             border-radius: 50%;
+            @include mobile {
+                overflow: hidden;
+                margin-top: 25px;
+            }
             img {
                 width: 590px;
                 height: 590px;
                 object-fit: cover;
+                @include mobile {
+                    height: 240px;
+                    width: 240px;
+                    object-fit: cover;
+                }
             }
         }
     }
@@ -30,19 +47,38 @@
             height: 90%;
             padding-left: 50px;
             
+            @include mobile{
+                padding: 0 10px;
+                height: unset;
+            }
+
+            
             h1 {
                 font-size: 60px;
                 padding: 10px 0;
+                @include mobile{
+                    font-size: 40px;
+                }
+    
             }
             h2 {
                 font-size: 35px;
+                @include mobile{
+                    font-size: 25px;
+                }
             }
             h3 {
                 font-size: 30px;
+                @include mobile{
+                    font-size: 20px;
+                }
 
                 span {
                     font-size: 30px;
                     color: crimson;
+                    @include mobile{
+                        font-size: 20px;
+                    }
                 }
                 .ityped-cursor {
                     animation: blink 0.6s infinite;
@@ -72,6 +108,9 @@
                 100% {
                     opacity: 0;
                 }
+            }
+            @include mobile {
+                opacity: 0;
             }
         }
     }
